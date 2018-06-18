@@ -62,7 +62,7 @@ var rule = (function(){
                 i++;
             }
         }
-        if(char() == '@'){
+        if(char() === '@'){
             i++;
             var num = 0;
             while(/[0-9]/.test(char())){
@@ -75,7 +75,7 @@ var rule = (function(){
             whiteSpace();
         }
         while(i < rhs.length){
-            if(char() == escapeChar){
+            if(char() === escapeChar){
                 i++;
                 if(i < rhs.length){
                     emit(char());
@@ -85,12 +85,12 @@ var rule = (function(){
                     emit(escapeChar);
                 }
             }
-            else if(char() == '<') {
+            else if(char() === '<') {
                 i++;
                 var name = '';
                 var bounded = false;
                 while(i < rhs.length){
-                    if(char() == '>'){
+                    if(char() === '>'){
                         i++;
                         bounded = true;
                         break;
