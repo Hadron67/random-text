@@ -1,0 +1,8 @@
+vscode/**
+node_modules/**
+tests/**
+lexical-db/**
+lib/**
+index.html
+index.css
+index.js

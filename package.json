@@ -1,0 +1,19 @@
+{
+  "name": "random-text",
+  "version": "1.0.0",
+  "description": "Generate random text using a given context-free grammar",
+  "main": "random-text.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "hadroncfy",
+  "keywords": [
+    "random",
+    "text",
+    "grammar"
+  ],
+  "license": "MIT"
+}

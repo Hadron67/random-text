@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>复杂长难句 v2.0（randsen演示）</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/index.css" />
+</head>
+<body>
+    <div class="main-panel">
+        <div id="output-container" class="output-container"></div>
+        <ul class="btn-container">
+            <li>
+                <button class="btn btn-run" id='btn-run'>Press Me</button>
+            </li>
+            <li>
+                <button class="btn btn-copy btn-hint" id='btn-copy'>Copy</button>
+                <div class="hint" id="copy-hint" style="display: none;">Copied!</div>
+            </li>
+        </ul>
+    </div>
+    <!-- <div class="" style="display: none;">Copied.</div> -->
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/clipboard.min.js"></script>
+    <script src="lexical-db/manifest.js"></script>
+    <script src="random-text.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
