@@ -22,14 +22,11 @@ body {
     margin-right: 100px;
 }
 .output-container-outter {
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding: 40px 40px 0px 40px;
     border-radius: 5px;
 }
 .output-container-inner {
-    height: 300px;
+    height: 350px;
     overflow-y: auto;
 }
 .output-container {
@@ -75,12 +72,17 @@ ul.btn-container > li {
         margin-right: 25px;
     }
     .output-container-inner {
-        height: 500px;
+        height: 400px;
     }
 }
 @media(max-width: 500px){
     .output-container {
         font-size: 22px;
+    }
+}
+@media(max-width: 380px){
+    .output-container-outter {
+        padding: 20px 20px 0px 20px;
     }
 }
 
