@@ -4,7 +4,8 @@
 })({
     'start': '<sentence>',
     'sentence': [
-        '@ <subject><action-sentence>',
+        '@5 <subject><action-sentence>',
+        '@4 <time-clause>，<subject><action-sentence-without-time>',
         '<news-verb><subject><speak>',
         '<news-verb><subject><adv-modifier><verb>。'
     ],
@@ -13,19 +14,36 @@
         '一边<verb>一边<verb>。',
         '一边<verb>一边<speak>',
         '<verb-modal><speak>',
-        '<verb-modal><adv-modifier-without-time><verb-present>。',
-        '<verb>，然后<verb>。',
-        '<verb>，然后<speak>',
+        '<verb-modal><adv-modifier><verb-present>。',
+        '<adv-modifier><verb>，然后<adv-modifier><verb>。',
+        '<adv-modifier><verb>，然后<speak>',
         '在<subject>的<position><verb>。',
         '骑在<subject>的<body-part><verb>。',
         '努力让<subject><adv-modifier><verb-present>。',
-        '拿着<weapon-like>威胁<subject>，要他<adv-modifier><verb-present>。',
+        '拿着<weapon-like>威胁<subject>，要他<adv-modifier-with-time-clause><verb-present>。',
         '<adv-modifier><verb>。'
+    ],
+    'action-sentence-without-time': [
+        '<speak>',
+        '一边<verb>一边<verb>。',
+        '一边<verb>一边<speak>',
+        '<adv-modifier-without-time><verb>，然后<adv-modifier-without-time><verb>。',
+        '<adv-modifier-without-time><verb>，然后<speak>',
+        '在<subject>的<position><verb>。',
+        '骑在<subject>的<body-part><verb>。',
+        '努力让<subject><adv-modifier><verb-present>。',
+        '拿着<weapon-like>威胁<subject>，要他<adv-modifier-with-time-clause><verb-present>。',
+        '<adv-modifier-without-time><verb>。'
     ],
     'subject': [
         '<person>',
         '刚刚<adv-modifier-without-time><verb>的<person>',
-        '<verb-modal><adv-modifier-without-time><verb-present>的<person>'
+        '@2 <verb-modal><adv-modifier><verb-present>的<person>'
+    ],
+    'time-clause': [
+        '当<subject><verb-perfect>时',
+        '就在<subject><verb-perfect>时',
+        '在<subject><verb-perfect>之前'
     ],
     'speak': '<verb-speak>：<speak-content>',
     'class': [
@@ -180,8 +198,10 @@
         '高考后'
     ],
     'adv-modifier': [
-        "@ <adv-modifier-without-time>",
-        "@ <time>在<place>",
+        "<adv-modifier-without-time>",
+        "<time>在<place>",
+        "在<time>",
+        "在<subject>的<position>"
     ],//b
     'adv-modifier-without-time': [
         "",
@@ -190,8 +210,11 @@
         "跑到操场上",
         "拿着蓝翔的毕业证",
         "@ 在<place-time>",
-        "@ 在<place>",
-        "@ 在<time>"
+        "@ 在<place>"
+    ],
+    'adv-modifier-with-time-clause': [
+        '@3 <adv-modifier>',
+        '<time-clause>'
     ],
     'verb': [
         "@ <verb-present>",
@@ -335,8 +358,8 @@
         "吸了毒",
         "看学案，但实在无聊睡着了",
         "对着手机发了呆",
-        "发动了信仰之跃",
-        "试图在岩浆里游了泳",
+        "<chute-reason>发动了信仰之跃",
+        "<chute-reason>试图在岩浆里游了泳",
         "在<mc-server>里搭建了<mc-structure>",
         "@ 唱起了<sing-noun>",
         "@ 做了<do-noun>",
@@ -349,6 +372,10 @@
     ],
     'verb-passive': [
         "被仙人掌扎成了刺猬"
+    ],
+    'chute-reason': [
+        '',
+        '为躲避<person>的攻击而'
     ],
     'watch-noun': [
         '小说',
@@ -404,7 +431,7 @@
     ],
     'sing-noun': [
         "字母歌",
-        "起情歌",
+        "情歌",
         "少先队队歌",
         "黑猫警长",
         "葫芦娃",
@@ -557,8 +584,14 @@
     ],
     'movie': [
         '唐之韵', 
-        '星球大战', 
-        '蜘蛛侠'
+        '星球大战',
+        "百家讲坛",
+        '蜘蛛侠',
+        "独立日",
+        "风雨哈佛路",
+        "美丽人生",
+        "肖申克的救赎",
+        "地心毁灭"
     ],
     'book': [
         '名师一号', 
@@ -582,6 +615,19 @@
         '微分几何入门与广义相对论',
         '简明量子场论',
         '粒子物理导论',
-        '物理学中的群论'
+        '物理学中的群论',
+        "场的统计物理",
+        "微分流形与李群",
+        "Unix网络编程",
+        "Nodejs设计模式",
+        "Python科学计算",
+        "计算机原理与设计——Verilog HDL版",
+        "三体1——地球往事",
+        "三体2——黑暗森林",
+        "三体3——死神永生",
+        "三体x——观想之宙",
+        "球状闪电",
+        "巴黎圣母院",
+        "超新星纪元"
     ]
 });

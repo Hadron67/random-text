@@ -8,11 +8,12 @@
     <link rel="stylesheet" type="text/css" media="screen" href="css/index.css" />
 </head>
 <body>
-    <div class="main-panel">
+    <div class="main-panel clearfix">
         <div class="output-container" id="output-container">
             <div class="loading loading-data" id="loading-ind"></div>
         </div>
-        <ul class="btn-container">
+        <div class="seperator"></div>
+        <ul class="btn-container clearfix">
             <li>
                 <button class="btn btn-run" id='btn-run'>Press Me</button>
             </li>
@@ -21,6 +22,13 @@
                 <div class="hint" id="copy-hint" style="display: none;">Copied!</div>
             </li>
         </ul>
+    </div>
+    <div class="footer">
+        <div class="footer-line">Made by hadroncfy &amp; wxyhly</div>
+        <div class="footer-line">
+            Licenced under 
+            <a class="footer-link" href="https://opensource.org/licenses/MIT">MIT</a></a>
+        </div>
     </div>
     <!-- <div class="" style="display: none;">Copied.</div> -->
     <script src="lib/jquery.min.js"></script>
