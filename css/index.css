@@ -21,17 +21,21 @@ body {
     margin-left: 100px;
     margin-right: 100px;
 }
-.output-container {
-    height: 55vh;
+.output-container-outter {
     padding-left: 40px;
     padding-right: 40px;
     padding-top: 50px;
     padding-bottom: 50px;
+    border-radius: 5px;
+}
+.output-container-inner {
+    height: 300px;
+    overflow-y: auto;
+}
+.output-container {
     background-color: white;
     font-family: 'Times New Roman', Times, serif;
     font-size: 35px;
-    border-radius: 5px;
-    overflow-y: auto;
 }
 .btn-container {
     border-radius: 5px;
@@ -65,16 +69,16 @@ ul.btn-container > li {
         font-size: 30px;
     }
 }
-@media(max-width: 750px){
+@media(max-width: 850px){
     .main-panel {
         margin-left: 25px;
         margin-right: 25px;
     }
-    .output-container {
-        height: 70vh;
+    .output-container-inner {
+        height: 500px;
     }
 }
-@media(max-width: 400px){
+@media(max-width: 500px){
     .output-container {
         font-size: 22px;
     }
