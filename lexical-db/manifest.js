@@ -36,5 +36,5 @@ var grammarLoader = (function(files){
         load: load
     };
 })([
-    'data.js'
+    'main.js'
 ]);
